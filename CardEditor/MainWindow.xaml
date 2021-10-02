@@ -1,0 +1,50 @@
+﻿<Window x:Class="CardEditor.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CardEditor"
+        mc:Ignorable="d"
+        Title="Card Editor" Height="450" Width="800" ResizeMode="CanMinimize">
+    <Grid x:Name="grid" Background="#FF8D8D8D">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="533*"/>
+            <ColumnDefinition Width="267*"/>
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="tbxName" HorizontalAlignment="Left" Margin="101,52,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="153" Height="27" Grid.Column="1"/>
+        <TextBlock HorizontalAlignment="Left" Margin="0,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1"><Run Language="nb-no" Text="Name:"/></TextBlock>
+        <ComboBox x:Name="cboType" HorizontalAlignment="Left" Margin="101,126,0,0" VerticalAlignment="Top" Width="153" SelectedIndex="2" Grid.Column="1">
+            <ComboBoxItem Content="Dark"/>
+            <ComboBoxItem Content="Light"/>
+            <ComboBoxItem Content="Wood"/>
+            <ComboBoxItem Content="Metal"/>
+            <ComboBoxItem Content="Earth"/>
+            <ComboBoxItem Content="Wind"/>
+            <ComboBoxItem Content="Fire"/>
+
+        </ComboBox>
+        <TextBlock HorizontalAlignment="Left" Margin="0,129,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1"><Run Language="nb-no" Text="Type"/><Run Text=":"/></TextBlock>
+
+        <Image x:Name="image" Source="/asdasdasdsade.png" Margin="24,87,114,86"/>
+
+        <Border BorderThickness="1" BorderBrush="Black" Margin="42,87,129,86"/>
+        <TextBlock TextWrapping="Wrap" Margin="41,58,378,324" RenderTransformOrigin="0.594,-0.568"><Run Language="nb-no" Text="Image:"/></TextBlock>
+        <Button x:Name="btnUpload" Content="Upload Image" Margin="280,57,129,332" Click="Button_Click" Panel.ZIndex="1"/>
+        <TextBox x:Name="tbxAddType" HorizontalAlignment="Left" Margin="101,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="153" Height="27" Grid.Column="1"/>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Center" Grid.Column="1"><Run Language="nb-no" Text="Add Type"/><Run Text=":"/></TextBlock>
+        <Button x:Name="btnAddType" Content="Add Type" Margin="177,263,13,126" Click="Button_Click" Grid.Column="1"/>
+        <TextBlock TextWrapping="Wrap" Margin="10,10,263,368" RenderTransformOrigin="0.594,-0.568" FontSize="22"><Run Language="nb-no" Text="Card Editor"/></TextBlock>
+        <TextBox x:Name="tbxTypeAtk" HorizontalAlignment="Left" Margin="58,236,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="54" Height="27" Grid.Column="1"/>
+        <TextBox x:Name="tbxTypeCost" HorizontalAlignment="Left" Margin="128,236,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="54" Height="27" Grid.Column="1"/>
+        <TextBox x:Name="tbxTypeCost1" HorizontalAlignment="Left" Margin="200,236,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="54" Height="27" Grid.Column="1"/>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="476,237,0,0" Width="115" Grid.ColumnSpan="2"><Run Text="ATK"/><Run Language="nb-no" Text="/"/><Run Text="DEF"/><Run Language="nb-no" Text="/"/><Run Text="COST"/><Run Language="nb-no" Text=":"/></TextBlock>
+        <TextBlock x:Name="tbcPath" TextWrapping="Wrap" Margin="42,348,133,34" RenderTransformOrigin="0.594,-0.568"><Run Language="nb-no" Text="Path: "/></TextBlock>
+        <TextBox x:Name="tbxCardAtk" HorizontalAlignment="Left" Margin="53,331,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="54" Height="27" Grid.Column="1"/>
+        <TextBox x:Name="tbxCardDef" HorizontalAlignment="Left" Margin="123,331,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="54" Height="27" Grid.Column="1"/>
+        <TextBox x:Name="tbxCardCost" HorizontalAlignment="Left" Margin="195,331,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="54" Height="27" Grid.Column="1"/>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="471,332,0,0" Width="115" Grid.ColumnSpan="2"><Run Text="ATK"/><Run Language="nb-no" Text="/"/><Run Text="DEF"/><Run Language="nb-no" Text="/"/><Run Text="COST"/><Run Language="nb-no" Text=":"/></TextBlock>
+        <Button x:Name="btnAddCard" Content="Add Card" Margin="177,379,18,10" Click="Button_Click" Grid.Column="1" RenderTransformOrigin="-1.852,3.087"/>
+        <Button x:Name="btnBrowse" Content="Browse Cards" Margin="26,379,160,10" Click="Button_Click" Grid.Column="1" RenderTransformOrigin="-1.852,3.087"/>
+
+    </Grid>
+</Window>
