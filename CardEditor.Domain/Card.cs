@@ -12,19 +12,15 @@ namespace CardEditor.Domain
         [BsonElement("name")]
         public string Name { get; set; }
 
-        [BsonElement("description")]
-        public string Description { get; set; }
-
-        [BsonElement("type")]
+        [BsonElement("typing")]
         [BsonRepresentation(BsonType.String)]
-        public  string Type { get; set; }
+        public  string Typing { get; set; }
 
         [BsonElement("attack")]
         public int Attack { get; set; }
 
-
-        [BsonElement("health")]
-        public int Health { get; set; }
+        [BsonElement("defence")]
+        public int Defence { get; set; }
 
         [BsonElement("cost")]
         public int Cost { get; set; }

@@ -9,8 +9,16 @@ namespace CardEditor.Domain
 {
     public class Types : MongoBase
     {
-        [BsonElement("type")]
-        public string Type { get; set; }
-            
+        [BsonElement("name")]
+        public string Name { get; set; }
+
+        [BsonElement("attack")]
+        public int Attack { get; set; }
+
+        [BsonElement("defence")]
+        public int Defence { get; set; }
+        
+        [BsonElement("cost")]
+        public int Cost { get; set; }
     }
 }

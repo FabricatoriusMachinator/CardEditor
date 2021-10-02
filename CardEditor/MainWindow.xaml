@@ -35,8 +35,8 @@
         <Button x:Name="btnAddType" Content="Add Type" Margin="177,263,13,126" Click="Button_Click" Grid.Column="1"/>
         <TextBlock TextWrapping="Wrap" Margin="10,10,263,368" RenderTransformOrigin="0.594,-0.568" FontSize="22"><Run Language="nb-no" Text="Card Editor"/></TextBlock>
         <TextBox x:Name="tbxTypeAtk" HorizontalAlignment="Left" Margin="58,236,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="54" Height="27" Grid.Column="1"/>
-        <TextBox x:Name="tbxTypeCost" HorizontalAlignment="Left" Margin="128,236,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="54" Height="27" Grid.Column="1"/>
-        <TextBox x:Name="tbxTypeCost1" HorizontalAlignment="Left" Margin="200,236,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="54" Height="27" Grid.Column="1"/>
+        <TextBox x:Name="tbxTypeDef" HorizontalAlignment="Left" Margin="128,236,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="54" Height="27" Grid.Column="1"/>
+        <TextBox x:Name="tbxTypeCost" HorizontalAlignment="Left" Margin="200,236,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="54" Height="27" Grid.Column="1"/>
         <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="476,237,0,0" Width="115" Grid.ColumnSpan="2"><Run Text="ATK"/><Run Language="nb-no" Text="/"/><Run Text="DEF"/><Run Language="nb-no" Text="/"/><Run Text="COST"/><Run Language="nb-no" Text=":"/></TextBlock>
         <TextBlock x:Name="tbcPath" TextWrapping="Wrap" Margin="42,348,133,34" RenderTransformOrigin="0.594,-0.568"><Run Language="nb-no" Text="Path: "/></TextBlock>
         <TextBox x:Name="tbxCardAtk" HorizontalAlignment="Left" Margin="53,331,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="54" Height="27" Grid.Column="1"/>

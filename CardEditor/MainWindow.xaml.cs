@@ -1,4 +1,5 @@
 ﻿using CardEditor.Data;
+using CardEditor.Domain;
 using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
@@ -48,6 +49,28 @@ namespace CardEditor
                 typeText = tbxAddType.Text;
                 cboType.Items.Add(typeText);
                 tbxAddType.Clear();
+            }
+            else if (sender.Equals(btnAddType))
+            {
+                var type = new Types { 
+                    Name = tbxAddType.Text, 
+                    Attack = int.Parse(tbxTypeAtk.Text), 
+                    Defence = int.Parse(tbxTypeDef.Text),
+                    Cost = int.Parse(tbxTypeCost.Text)
+                };
+                manager.storeData(type);
+            }
+            else if (sender.Equals(btnAddCard))
+            {
+                var card = new Card { 
+                    Name = tbxName.Text,
+                    Typing = cboType.Text,
+                    Attack = int.Parse(tbxCardAtk.Text),
+                    Defence = int.Parse(tbxCardDef.Text),
+                    Cost = int.Parse(tbxCardCost.Text),
+                    filePath = filePath
+                };
+                manager.storeData(card);
             }
         }
 
