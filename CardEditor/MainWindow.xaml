@@ -13,16 +13,7 @@
         </Grid.ColumnDefinitions>
         <TextBox x:Name="tbxName" HorizontalAlignment="Left" Margin="101,52,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="153" Height="27" Grid.Column="1"/>
         <TextBlock HorizontalAlignment="Left" Margin="0,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1"><Run Language="nb-no" Text="Name:"/></TextBlock>
-        <ComboBox x:Name="cboType" HorizontalAlignment="Left" Margin="101,126,0,0" VerticalAlignment="Top" Width="153" SelectedIndex="2" Grid.Column="1">
-            <ComboBoxItem Content="Dark"/>
-            <ComboBoxItem Content="Light"/>
-            <ComboBoxItem Content="Wood"/>
-            <ComboBoxItem Content="Metal"/>
-            <ComboBoxItem Content="Earth"/>
-            <ComboBoxItem Content="Wind"/>
-            <ComboBoxItem Content="Fire"/>
-
-        </ComboBox>
+        <ComboBox x:Name="cboType" HorizontalAlignment="Left" Margin="101,126,0,0" VerticalAlignment="Top" Width="153" SelectedIndex="2" Grid.Column="1"/>
         <TextBlock HorizontalAlignment="Left" Margin="0,129,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1"><Run Language="nb-no" Text="Type"/><Run Text=":"/></TextBlock>
 
         <Image x:Name="image" Source="/asdasdasdsade.png" Margin="24,87,114,86"/>

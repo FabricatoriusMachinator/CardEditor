@@ -10,14 +10,28 @@ namespace CardEditor.Data
 {
     public class EditorManager
     {
+        private static EditorManager instance = null;
+
         MongoClient client;
         IMongoDatabase database;
         CardEditorDbContext context;
-        IMongoCollection<Card> cardCollection;
-        IMongoCollection<Types> typeCollection;
+        public IMongoCollection<Card> cardCollection;
+        public IMongoCollection<Types> typeCollection;
 
         private const string MongoDbUrl = "mongodb://localhost:27017";
         private const string CardDbName = "MongoCards";
+
+        public static EditorManager Instance
+        {
+            get
+            {
+                if (instance == null)
+                {
+                    instance = new EditorManager();
+                }
+                return instance;
+            }
+        }
 
         public void Init()
         {

@@ -28,13 +28,13 @@ namespace CardEditor
     {
         string typeText;
         string filePath;
-        //EditorManager manager;
+        EditorManager manager;
 
         public MainWindow()
         {
             InitializeComponent();
-            //manager = new EditorManager();
-            //manager.Init();
+            manager = new EditorManager();
+            manager.Init();
 
         }
 
@@ -59,6 +59,7 @@ namespace CardEditor
                     Cost = int.Parse(tbxTypeCost.Text)
                 };
                 manager.storeData(type);
+
             }
             else if (sender.Equals(btnAddCard))
             {
@@ -72,9 +73,14 @@ namespace CardEditor
                 };
                 manager.storeData(card);
             }
+            else if (sender.Equals(btnBrowse))
+            {
+                CardBrowser cardBrowser = new CardBrowser();
+                cardBrowser.Show();
+            }
         }
 
-        private void imageUpload()
+        public void imageUpload()
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "Image files (*.jpg)|*.jpg|All Files (*.*)|*.*"; ;
@@ -91,6 +97,39 @@ namespace CardEditor
                 bitmap.EndInit();
                 image.Source = bitmap;
 
+            }
+        }
+
+        public EditorManager getManager()
+        {
+            return manager;
+        }
+
+        public static IEnumerable<T> FindChildren<T>(DependencyObject dObj) where T : DependencyObject
+        {
+
+            for(int i = 0; i < VisualTreeHelper.GetChildrenCount(dObj); i++)
+            {
+                var child = VisualTreeHelper.GetChild(dObj, i);
+
+                if(child != null && child is T)
+                {
+                    yield return (T)child;
+                }
+
+                foreach(T childOfChild in FindChildren<T>(child))
+                {
+                    yield return childOfChild;
+                }
+            }
+            
+        }
+
+        public void clearAll()
+        {
+            foreach(var tbx in FindChildren<TextBox>(this))
+            {
+                tbx.Clear();
             }
         }
     }

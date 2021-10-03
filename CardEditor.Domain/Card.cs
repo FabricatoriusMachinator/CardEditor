@@ -13,7 +13,6 @@ namespace CardEditor.Domain
         public string Name { get; set; }
 
         [BsonElement("typing")]
-        [BsonRepresentation(BsonType.String)]
         public  string Typing { get; set; }
 
         [BsonElement("attack")]

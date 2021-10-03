@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <None Remove="asdasdasdsade.png" />
+    <None Remove="blankCard.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -20,6 +21,7 @@
 
   <ItemGroup>
     <Resource Include="asdasdasdsade.png" />
+    <Resource Include="blankCard.png" />
   </ItemGroup>
 
 </Project>
