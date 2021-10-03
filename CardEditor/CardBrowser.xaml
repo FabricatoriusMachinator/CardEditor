@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:CardEditor"
         mc:Ignorable="d"
         Title="CardBrowser" Height="450" Width="800">
-    <Grid>
+    <Grid x:Name="grid" Background="#FF8D8D8D">
         <DataGrid x:Name="dgCards" Margin="46,28,350,108" MouseUp="dgCards_MouseUp"/>
         <Button x:Name="btnDelete" Content="Delete" HorizontalAlignment="Center" Margin="0,356,0,0" VerticalAlignment="Top" Height="49" Width="104"/>
         <Button x:Name="btnUpdate" Content="Update" HorizontalAlignment="Left" Margin="46,356,0,0" VerticalAlignment="Top" Height="49" Width="103" Click="Button_Click"/>

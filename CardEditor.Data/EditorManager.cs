@@ -54,6 +54,12 @@ namespace CardEditor.Data
             typeCollection.InsertOne(type);
         }
 
+        public List<Types> getTypeList()
+        {
+            List<Types> list = typeCollection.AsQueryable().ToList<Types>();
+            return list;
+        }
+
 
     }
 }

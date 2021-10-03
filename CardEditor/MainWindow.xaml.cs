@@ -35,6 +35,7 @@ namespace CardEditor
             InitializeComponent();
             manager = new EditorManager();
             manager.Init();
+            populateComboBox();
 
         }
 
@@ -59,6 +60,7 @@ namespace CardEditor
                     Cost = int.Parse(tbxTypeCost.Text)
                 };
                 manager.storeData(type);
+                populateComboBox();
 
             }
             else if (sender.Equals(btnAddCard))
@@ -130,6 +132,17 @@ namespace CardEditor
             foreach(var tbx in FindChildren<TextBox>(this))
             {
                 tbx.Clear();
+            }
+        }
+
+        public void populateComboBox()
+        {
+            cboType.Items.Clear();
+            List<Types> list = manager.getTypeList();
+            
+            foreach(Types types in list)
+            {
+                cboType.Items.Add(types.Name);
             }
         }
     }
