@@ -25,6 +25,6 @@ namespace CardEditor.Domain
         public int Cost { get; set; }
 
         [BsonElement("image")]
-        public string filePath { get; set; }
+        public string FilePath { get; set; }
     }
 }

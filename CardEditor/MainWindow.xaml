@@ -16,7 +16,7 @@
         <ComboBox x:Name="cboType" HorizontalAlignment="Left" Margin="101,126,0,0" VerticalAlignment="Top" Width="153" SelectedIndex="2" Grid.Column="1"/>
         <TextBlock HorizontalAlignment="Left" Margin="0,129,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1"><Run Language="nb-no" Text="Type"/><Run Text=":"/></TextBlock>
 
-        <Image x:Name="image" Source="/asdasdasdsade.png" Margin="24,87,114,86"/>
+        <Image x:Name="image" Source="/asdasdasdsade.png" Margin="42,87,129,86" Stretch="Fill"/>
 
         <Border BorderThickness="1" BorderBrush="Black" Margin="42,87,129,86"/>
         <TextBlock TextWrapping="Wrap" Margin="41,58,378,324" RenderTransformOrigin="0.594,-0.568"><Run Language="nb-no" Text="Image:"/></TextBlock>

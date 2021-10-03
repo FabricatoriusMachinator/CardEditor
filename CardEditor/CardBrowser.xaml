@@ -8,8 +8,7 @@
         Title="CardBrowser" Height="450" Width="800">
     <Grid x:Name="grid" Background="#FF8D8D8D">
         <DataGrid x:Name="dgCards" Margin="46,28,350,108" MouseUp="dgCards_MouseUp"/>
-        <Button x:Name="btnDelete" Content="Delete" HorizontalAlignment="Center" Margin="0,356,0,0" VerticalAlignment="Top" Height="49" Width="104"/>
-        <Button x:Name="btnUpdate" Content="Update" HorizontalAlignment="Left" Margin="46,356,0,0" VerticalAlignment="Top" Height="49" Width="103" Click="Button_Click"/>
+        <Button x:Name="btnDelete" Content="Delete" HorizontalAlignment="Center" Margin="0,356,0,0" VerticalAlignment="Top" Height="49" Width="104" Click="btnDelete_Click"/>
         <Image x:Name="imgOuter" HorizontalAlignment="Left" Height="380" Margin="532,0,0,0" VerticalAlignment="Top" Width="242" Source="/blankCard.png" Panel.ZIndex="2"/>
         <Image x:Name="imgInner" HorizontalAlignment="Left" Height="174" Margin="587,28,0,0" VerticalAlignment="Top" Width="148" Panel.ZIndex="-3" Source="/asdasdasdsade.png" Stretch="Fill"/>
         <Label x:Name="lblAtk" Content="9" HorizontalAlignment="Left" Margin="556,306,0,0" VerticalAlignment="Top" Panel.ZIndex="2" FontSize="16" FontFamily="Bodoni MT Black" Height="36" Width="49" FontWeight="Bold" Foreground="White"/>
@@ -17,6 +16,8 @@
         <Label x:Name="lblCost" Content="9" HorizontalAlignment="Left" Margin="556,37,0,0" VerticalAlignment="Top" Panel.ZIndex="2" FontSize="22" FontFamily="Bodoni MT Black" Height="36" Width="49" FontWeight="Bold" Foreground="White"/>
         <Label x:Name="lblName" Content="Label" HorizontalAlignment="Left" Margin="569,177,0,0" VerticalAlignment="Top" Panel.ZIndex="3" Width="181" FontWeight="Bold" FontFamily="Bodoni MT Black" Height="56"/>
         <Label x:Name="lblType" Content="Label" HorizontalAlignment="Left" Margin="580,250,0,0" VerticalAlignment="Top" Panel.ZIndex="3" Width="182" FontWeight="Bold" FontFamily="Bodoni MT Black" Height="56"/>
+        <Button x:Name="btnImport" Content="Import" HorizontalAlignment="Left" Margin="46,356,0,0" VerticalAlignment="Top" Height="49" Width="104" Click="btnImport_Click"/>
+        <Button x:Name="btnExport" Content="Export" HorizontalAlignment="Left" Margin="172,356,0,0" VerticalAlignment="Top" Height="49" Width="104" Click="btnExport_Click"/>
 
     </Grid>
 </Window>

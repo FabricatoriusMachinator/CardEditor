@@ -1,6 +1,7 @@
 ﻿using CardEditor.Data;
 using CardEditor.Domain;
 using Microsoft.Win32;
+using MongoDB.Driver;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -47,12 +48,6 @@ namespace CardEditor
             }
             else if (sender.Equals(btnAddType))
             {
-                typeText = tbxAddType.Text;
-                cboType.Items.Add(typeText);
-                tbxAddType.Clear();
-            }
-            else if (sender.Equals(btnAddType))
-            {
                 var type = new Types { 
                     Name = tbxAddType.Text, 
                     Attack = int.Parse(tbxTypeAtk.Text), 
@@ -71,9 +66,10 @@ namespace CardEditor
                     Attack = int.Parse(tbxCardAtk.Text),
                     Defence = int.Parse(tbxCardDef.Text),
                     Cost = int.Parse(tbxCardCost.Text),
-                    filePath = filePath
+                    FilePath = filePath
                 };
-                manager.storeData(card);
+                manager.StoreData(card);
+                clearAll();
             }
             else if (sender.Equals(btnBrowse))
             {
@@ -85,7 +81,7 @@ namespace CardEditor
         public void imageUpload()
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = "Image files (*.jpg)|*.jpg|All Files (*.*)|*.*"; ;
+            openFileDialog.Filter = "Image files (*.jpg)|*.jpg|All Files (*.*)|*.*";
             openFileDialog.RestoreDirectory = true;
 
             if (openFileDialog.ShowDialog() == true)
@@ -132,13 +128,17 @@ namespace CardEditor
             foreach(var tbx in FindChildren<TextBox>(this))
             {
                 tbx.Clear();
+                image.Source = null;
             }
+
         }
+
+
 
         public void populateComboBox()
         {
             cboType.Items.Clear();
-            List<Types> list = manager.getTypeList();
+            List<Types> list = manager.GetTypeList();
             
             foreach(Types types in list)
             {
